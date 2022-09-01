@@ -4,11 +4,14 @@ import { AppComponent } from './app.component';
 import { DepartmentsComponent } from './departments/departments.component';
 import { ExaminationsComponent } from './examinations/examinations.component';
 import { ResultsComponent } from './results/results.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: DepartmentsComponent
+    path: 'login', component: LoginComponent
+  },
+  {
+    path: '', component: LoginComponent
   },
   {
     path: 'departments',
