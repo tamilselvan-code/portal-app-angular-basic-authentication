@@ -8,7 +8,7 @@ import { catchError, Observable, retry, throwError } from 'rxjs';
 })
 export class DataService {
   // Define API
-  apiURL = 'http://localhost:8080/RESTWebService/rest/portal';
+  apiURL = 'http://localhost:8080/api';
   constructor(private http: HttpClient) { }
   /*========================================
     CRUD Methods for consuming RESTful API
