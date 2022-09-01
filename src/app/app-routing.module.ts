@@ -24,6 +24,10 @@ const routes: Routes = [
   {
     path: 'results',
     component: ResultsComponent
+  },
+  {
+    path: 'logout',
+    component: LoginComponent
   }
 ];
 

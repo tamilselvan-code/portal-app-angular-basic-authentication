@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class AuthenticationService {
 
   public username: String = '';
   public password: String = '';
-
+  public isLoggedIn:  Subject<boolean> = new Subject<boolean>();;
   constructor(private http: HttpClient) {
 
   }
@@ -36,14 +37,20 @@ export class AuthenticationService {
 
   logout() {
     sessionStorage.removeItem(this.USER_NAME_SESSION_ATTRIBUTE_NAME);
+    this.isLoggedIn.next(false);
     this.username = '';
     this.password = '';
   }
 
   isUserLoggedIn() {
     let user = sessionStorage.getItem(this.USER_NAME_SESSION_ATTRIBUTE_NAME)
-    if (user === null) return false
-    return true
+    if (user === null){ 
+      this.isLoggedIn.next(false);
+      return false;
+    } else {
+      this.isLoggedIn.next(true);
+      return true
+    }
   }
 
   getLoggedInUserName() {
