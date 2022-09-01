@@ -1,0 +1,20 @@
+<div class="departments">
+
+    <h2>Departments</h2>
+    <table class="departmentstable">
+        <thead class="departmentheader">
+            <tr>
+                <td>S. No</td>
+                <td>Unique Id</td>
+                <td>Name</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let department of departments; let i = index">
+                <td>{{ i+1 }}</td>
+                <td>{{ department.id }}</td>
+                <td>{{ department.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
