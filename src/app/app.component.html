@@ -1,27 +1,16 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Best Engineering College</title>
-</head>
-
-<body>
-  <div class="container">
-    <div class="navigation">
-      <ul>
-        <li><a routerLink="departments" *ngIf="isLoggedIn">Departments</a></li>
-        <li><a routerLink="examinations" *ngIf="isLoggedIn">Examinations</a></li>
-        <li><a routerLink="results" *ngIf="isLoggedIn">Results</a></li>
-        <li><a routerLink="/logout" *ngIf="isLoggedIn" (click)=handleLogout()>Logout</a></li>
-      </ul>
-    </div>
-    <div class="main">
-      <div class="banner">
-        <h2>Best Engineering College</h2>
-      </div>
-      <router-outlet></router-outlet>
-    </div>
+<div class="container">
+  <div class="navigation">
+    <ul>
+      <li><a routerLink="departments" *ngIf="isLoggedIn">Departments</a></li>
+      <li><a routerLink="examinations" *ngIf="isLoggedIn">Examinations</a></li>
+      <li><a routerLink="results" *ngIf="isLoggedIn">Results</a></li>
+      <li><a routerLink="/logout" *ngIf="isLoggedIn" (click)=handleLogout()>Logout</a></li>
+    </ul>
   </div>
-</body>
-</html>
+  <div class="main">
+    <div class="banner">
+      <h2>Best Engineering College</h2>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
