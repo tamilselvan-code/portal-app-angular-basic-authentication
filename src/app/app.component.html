@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="navigation">
+  <div class="navigation" *ngIf="isLoggedIn">
     <ul>
       <li><a routerLink="departments" *ngIf="isLoggedIn">Departments</a></li>
       <li><a routerLink="examinations" *ngIf="isLoggedIn">Examinations</a></li>
@@ -7,10 +7,10 @@
       <li><a routerLink="/logout" *ngIf="isLoggedIn" (click)=handleLogout()>Logout</a></li>
     </ul>
   </div>
+  <div class="banner">
+    <h2>Best Engineering College</h2>
+  </div>
   <div class="main">
-    <div class="banner">
-      <h2>Best Engineering College</h2>
-    </div>
     <router-outlet></router-outlet>
   </div>
 </div>

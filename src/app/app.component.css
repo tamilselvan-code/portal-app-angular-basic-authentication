@@ -49,6 +49,8 @@ body{
     border-style: solid #fff;
     transition: 0.5s;
     overflow: hidden;
+    padding-top: 100px;
+    margin-top: 100px;
 }
 
 ul {
