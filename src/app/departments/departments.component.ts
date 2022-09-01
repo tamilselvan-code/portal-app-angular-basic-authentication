@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
 })
 export class DepartmentsComponent implements OnInit {
 
-  departments: any = {};
+  departments: any = [];
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
